@@ -1,5 +1,5 @@
 <!-- ═══════════════ HEADER BANNER ═══════════════ -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0a,50:ff6b00,100:ff3c00&height=220&section=header&text=Linus%20Thomas&fontSize=64&fontColor=ffffff&animation=fadeIn&desc=Co-Founder%20%C2%B7%20CEO%20%C2%B7%20Tech%20%26%20Strategy%20Lead%20%40%20GEKKOS&descAlignY=68&descSize=20" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0a,50:ff6b00,100:ff3c00&height=220&section=header&text=Linus%20Thomas&fontSize=64&fontColor=ffffff&animation=fadeIn&desc=Co-Founder%20%C2%B7%20CEO%20%C2%B7%20Tech%20%2B%20Strategy%20Lead%20%40%20GEKKOS&descAlignY=68&descSize=20" width="100%"/>
 
 <!-- ═══════════════ TYPING ANIMATION ═══════════════ -->
 <div align="center">
@@ -99,18 +99,21 @@ const linus = {
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=Linus72&show_icons=true&theme=radical&bg_color=0a0a0a&title_color=ff6b00&icon_color=ff3c00&text_color=ffffff&border_color=ff6b00&rank_icon=github" alt="GitHub Stats"/>
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Linus72&layout=compact&theme=radical&bg_color=0a0a0a&title_color=ff6b00&text_color=ffffff&border_color=ff6b00&langs_count=8" alt="Top Languages"/>
+  <img src="https://raw.githubusercontent.com/Linus72/Linus72/main/profile-summary-card-output/monokai/0-profile-details.svg" width="100%" alt="Profile Details"/>
+</div>
+
+<div align="center">
+  <img height="180" src="https://raw.githubusercontent.com/Linus72/Linus72/main/profile-summary-card-output/monokai/3-stats.svg" alt="Stats"/>
+  <img height="180" src="https://raw.githubusercontent.com/Linus72/Linus72/main/profile-summary-card-output/monokai/4-productive-time.svg" alt="Productive Time"/>
+</div>
+
+<div align="center">
+  <img height="180" src="https://raw.githubusercontent.com/Linus72/Linus72/main/profile-summary-card-output/monokai/1-repos-per-language.svg" alt="Top Languages by Repo"/>
+  <img height="180" src="https://raw.githubusercontent.com/Linus72/Linus72/main/profile-summary-card-output/monokai/2-most-commit-language.svg" alt="Top Languages by Commit"/>
 </div>
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=Linus72&theme=radical&background=0a0a0a&ring=ff6b00&fire=ff3c00&currStreakLabel=ff6b00&border=ff6b00" alt="GitHub Streak"/>
-</div>
-
-## 🏆 Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Linus72&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=8" alt="Trophies"/>
 </div>
 
 ## 📈 Contribution Graph
