@@ -49,8 +49,7 @@ Docker · Linux · NGINX · Vercel · Cloudflare · Git · GitHub Actions
 
 <div align="center">
 
-<img height="150" src="https://github-readme-stats.vercel.app/api?username=Linus72&show_icons=true&hide_border=true&hide_title=true&hide_rank=true&bg_color=00000000&text_color=888888&icon_color=888888" alt="GitHub Stats"/>
-<img height="150" src="https://streak-stats.demolab.com?user=Linus72&hide_border=true&background=00000000&stroke=88888855&ring=888888&fire=888888&currStreakNum=888888&currStreakLabel=888888&sideNums=888888&sideLabels=888888&dates=88888899" alt="GitHub Streak"/>
+<img height="160" src="https://streak-stats.demolab.com?user=Linus72&hide_border=true&background=00000000&stroke=88888855&ring=888888&fire=888888&currStreakNum=888888&currStreakLabel=888888&sideNums=888888&sideLabels=888888&dates=88888899" alt="GitHub Streak"/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Linus72&bg_color=00000000&color=888888&line=888888&point=888888&area=false&hide_border=true" width="100%" alt="Contribution Graph"/>
 
