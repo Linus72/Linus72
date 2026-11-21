@@ -3,47 +3,13 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/hero-dark.svg"/>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/hero-light.svg"/>
-  <img src="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/hero-dark.svg" width="100%" alt="LINUS72 — Co-Founder, Tech & Strategy Lead @ GEKKOS · Osnabrück"/>
+  <img src="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/hero-dark.svg" width="100%" alt="LINUS72 — Webdesign & Development · Osnabrück"/>
 </picture>
 
-<p align="center">
-  <a href="https://gekkos.tech"><code>[ GEKKOS.TECH ]</code></a>&nbsp;&nbsp;
-  <a href="mailto:info@gekkos.tech"><code>[ INFO@GEKKOS.TECH ]</code></a>&nbsp;&nbsp;
-  <code>x. 5227 · y. 0804</code>
-</p>
-
+<a href="mailto:hallo@linusthomas.de">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/about-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/about-light.svg"/>
-  <img src="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/about-dark.svg" width="100%" alt="Über mich: Web — Websites und digitale Produkte, die man nicht wieder vergisst. KI & Automatisierung — Chatbots, RAG, Workflow-Automation, DSGVO-konform und EU-gehostet. SEO & GEO — sichtbar für Menschen und für ChatGPT, Gemini und Perplexity. Handwerk — Motion, Performance und Barrierefreiheit sind Features, keine Nachgedanken."/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/panel-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/panel-light.svg"/>
+  <img src="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/panel-dark.svg" width="100%" alt="Webdesign & Development: Websites und Web-Apps, KI & Automatisierung, SEO & GEO. Interesse an einem Projekt? Schreib mir: hallo@linusthomas.de. Stack: TypeScript, JavaScript, Python, PHP, SQL · React, Next.js, Tailwind, Framer Motion, GSAP, Three.js, Webflow · Node.js, Express, PostgreSQL, MySQL, MongoDB, Redis, Supabase · OpenAI, Claude, RAG, n8n, Make · Docker, Linux, NGINX, Vercel, Cloudflare, Git, GitHub Actions"/>
 </picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/stack-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/stack-light.svg"/>
-  <img src="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/stack-dark.svg" width="100%" alt="Stack: TypeScript, JavaScript, Python, PHP, SQL, HTML, CSS · React, Next.js, Tailwind, Framer Motion, GSAP, Three.js, Webflow · Node.js, Express, PostgreSQL, MySQL, MongoDB, Redis, Supabase · OpenAI, Claude, RAG, n8n, Make · Docker, Linux, NGINX, Vercel, Cloudflare, Git, GitHub Actions"/>
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/telemetry-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/telemetry-light.svg"/>
-  <img src="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/telemetry-dark.svg" width="100%" alt="[03] Telemetry"/>
-</picture>
-
-<div align="center">
-
-<img height="160" src="https://streak-stats.demolab.com?user=Linus72&hide_border=true&background=00000000&stroke=88888855&ring=ff2b1c&fire=ff2b1c&currStreakNum=888888&currStreakLabel=ff2b1c&sideNums=888888&sideLabels=888888&dates=88888899" alt="GitHub Streak"/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/output/github-contribution-grid-snake.svg"/>
-  <img src="https://raw.githubusercontent.com/Linus72/Linus72/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution Snake"/>
-</picture>
-
-</div>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/footer-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/footer-light.svg"/>
-  <img src="https://raw.githubusercontent.com/Linus72/Linus72/main/assets/footer-dark.svg" width="100%" alt="End of transmission"/>
-</picture>
+</a>

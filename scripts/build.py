@@ -391,9 +391,9 @@ def build_hero(th, name):
     tfs = 15; tcw = tfs * 0.6
     ty0 = 268
     lines = [
-        [("> ", th["red"]), ("CO-FOUNDER // TECH & STRATEGY LEAD", th["fg"])],
-        [("> ", th["red"]), ("GEKKOS", th["fg"]), (" — OSNABRÜCK, DE", th["mid"])],
-        [("> ", th["red"]), ("WEB · KI & AUTOMATISIERUNG · SEO/GEO", th["fg"])],
+        [("> ", th["red"]), ("WEBDESIGN & DEVELOPMENT", th["fg"])],
+        [("> ", th["red"]), ("WEBSITES · WEB-APPS · KI · SEO/GEO", th["fg"])],
+        [("> ", th["red"]), ("OSNABRÜCK, DE", th["fg"]), (" — REMOTE WORLDWIDE", th["mid"])],
     ]
     t = 0.6
     for i, segs in enumerate(lines):
@@ -402,13 +402,13 @@ def build_hero(th, name):
         t += 0.15
     # cursor line
     cy_ = ty0 + 3 * 30
-    s.append(f'<g font-size="{tfs}">' + seg_line(hx, cy_, [("> ", th["red"]), ("STATUS: ", th["mid"]), ("ONLINE", th["fg"])], tcw)
-             + f'</g><rect class="blink" x="{hx + 16 * tcw + 4}" y="{cy_ - tfs * 0.82}" width="{tcw}" height="{tfs}" fill="{th["red"]}"/>')
+    s.append(f'<g font-size="{tfs}">' + seg_line(hx, cy_, [("> ", th["red"]), ("STATUS: ", th["mid"]), ("OPEN FOR PROJECTS", th["fg"])], tcw)
+             + f'</g><rect class="blink" x="{hx + 27 * tcw + 4}" y="{cy_ - tfs * 0.82}" width="{tcw}" height="{tfs}" fill="{th["red"]}"/>')
 
     # spec block
     sfs = 11; scw = sfs * 0.6
     spec = [
-        [("UPLINK ..... ", th["dim"]), ("gekkos.tech", th["fg"])],
+        [("CONTACT .... ", th["dim"]), ("hallo@linusthomas.de", th["red"])],
         [("COORDS ..... ", th["dim"]), ("52.27°N  08.04°E", th["fg"])],
         [("MODE ....... ", th["dim"]), ("BUILD > SHIP > REPEAT", th["fg"])],
     ]
@@ -505,60 +505,77 @@ def radar_frames(n, cols, rows, cw, ch, seed=4):
     return out
 
 
-def build_about(th, name):
-    W, H = 1200, 430
-    uid = "a"
+def build_panel(th, name):
+    W, H = 1200, 540
+    uid = "p"
     N, DUR = 24, 3.0
     css = frames_css("rd", N, DUR)
     s = [svg_open(W, H, th, css), chrome_defs(W, H, th, uid), chrome_bg(W, H, th)]
-
     x0 = 52
-    s.append(section_header(x0, 52, W, "01", "SUBJECT_FILE", "ID 0x4C37-72", th))
+    s.append(section_header(x0, 52, W, "01", "SERVICES // STACK", "ID 0x4C37-72", th))
 
-    fs = 14; cw = fs * 0.6
-    rows = [
-        [("NAME ......... ", th["dim"]), ("LINUS72", th["fg"])],
-        [("ROLE ......... ", th["dim"]), ("CO-FOUNDER // TECH & STRATEGY LEAD", th["fg"])],
-        [("ORG .......... ", th["dim"]), ("GEKKOS", th["red"]), (" · gekkos.tech", th["mid"])],
-        [("BASE ......... ", th["dim"]), ("OSNABRÜCK, DEUTSCHLAND", th["fg"])],
-    ]
     t = 0.3
-    for i, segs in enumerate(rows):
-        el, t = typed(x0, 104 + i * 25, segs, cw, t, speed=0.022, clip_id=f"ab{i}", fs=fs)
-        s.append(f'<g font-size="{fs}">{el}</g>')
-
-    s.append(f'<path d="M{x0},{220}h640" stroke="{th["dim"]}" stroke-width="1" stroke-dasharray="3 5"/>')
-
     bfs = 13; bcw = bfs * 0.6
     bullets = [
-        ("[WEB]   ", "Websites & digitale Produkte, die man nicht wieder vergisst."),
+        ("[WEB]   ", "Webdesign & Development: Websites & Web-Apps, die hängen bleiben."),
         ("[KI]    ", "Chatbots, RAG, Workflow-Automation. DSGVO-konform, EU-gehostet."),
         ("[SEO]   ", "Sichtbar für Menschen und für ChatGPT, Gemini & Perplexity."),
         ("[CRAFT] ", "Motion, Performance & A11y sind Features, keine Nachgedanken."),
     ]
     for i, (tag, txt) in enumerate(bullets):
-        el, t = typed(x0, 252 + i * 26, [(tag, th["red"]), (txt, th["fg"])], bcw, t + 0.05,
-                      speed=0.009, clip_id=f"bl{i}", fs=bfs)
+        el, t = typed(x0, 100 + i * 26, [(tag, th["red"]), (txt, th["fg"])], bcw, t,
+                      speed=0.008, clip_id=f"bl{i}", fs=bfs)
         s.append(f'<g font-size="{bfs}">{el}</g>')
 
-    # radar
-    rfs = 11; rcw = rfs * 0.6; rch = rfs * 0.92
-    rcols, rrows = 50, 28
-    rx, ry = W - 52 - rcols * rcw, 78
+    # contact call-to-action
+    cfs = 15; ccw = cfs * 0.6
+    el, t = typed(x0, 230, [("> ", th["red"]), ("INTERESSE AN EINEM PROJEKT? SCHREIB MIR:", th["fg"])],
+                  ccw, t + 0.1, speed=0.02, clip_id="ct0", fs=cfs)
+    s.append(f'<g font-size="{cfs}">{el}</g>')
+    mail = "hallo@linusthomas.de"
+    el, t = typed(x0, 258, [("> ", th["red"]), (mail, th["red"])], ccw, t + 0.05, speed=0.03, clip_id="ct1", fs=cfs)
+    s.append(f'<g font-size="{cfs}">{el}</g>')
+    s.append(f'<path d="M{x0 + 2 * ccw:.1f},{263}h{len(mail) * ccw:.1f}" stroke="{th["red"]}" stroke-width="1.2"/>')
+    s.append(f'<rect class="blink" x="{x0 + (len(mail) + 2) * ccw + 5:.1f}" y="{258 - cfs * .82:.1f}" width="{ccw:.1f}" height="{cfs}" fill="{th["red"]}"/>')
+
+    s.append(f'<path d="M{x0},300H{W - x0}" stroke="{th["dim"]}" stroke-width="1" stroke-dasharray="3 5"/>')
+
+    fs = 13; cw = fs * 0.6
+    mods = [
+        ("/lang    ", "TypeScript · JavaScript · Python · PHP · SQL · HTML · CSS"),
+        ("/frontend", "React · Next.js · Tailwind · Framer Motion · GSAP · Three.js · Webflow"),
+        ("/backend ", "Node.js · Express · PostgreSQL · MySQL · MongoDB · Redis · Supabase"),
+        ("/ai      ", "OpenAI · Claude · RAG · n8n · Make"),
+        ("/infra   ", "Docker · Linux · NGINX · Vercel · Cloudflare · Git · GitHub Actions"),
+    ]
+    for i, (path, items) in enumerate(mods):
+        segs = [("$ ", th["red"]), ("mount ", th["mid"]), (path, th["fg"]), ("  [", th["dim"]),
+                ("##########", th["fg"]), ("]  ", th["dim"]), ("OK", th["red"]), ("  ", None), (items, th["fg"])]
+        el, t = typed(x0, 340 + i * 30, segs, cw, t, speed=0.006, clip_id=f"st{i}", fs=fs)
+        s.append(f'<g font-size="{fs}">{el}</g>')
+        t += 0.06
+    el, t = typed(x0, 340 + len(mods) * 30 + 6, [("$ ", th["red"]), ("all systems nominal", th["fg"]),
+                  (" · 5/5 modules online", th["mid"])], cw, t + 0.15, speed=0.025, clip_id="stz", fs=fs)
+    s.append(f'<g font-size="{fs}">{el}</g>')
+
+    # radar (top right, next to services)
+    rfs = 10; rcw = rfs * 0.6; rch = rfs * 0.92
+    rcols, rrows = 46, 22
+    rx, ry = W - 52 - rcols * rcw, 66
     for i, (g, r_) in enumerate(radar_frames(N, rcols, rrows, rcw, rch)):
         inner = (f'<g font-size="{rfs}" fill="{th["mid"]}">{grid_lines(rx, ry, g, rcw, rch)}</g>'
                  f'<g font-size="{rfs}" fill="{th["red"]}">{grid_lines(rx, ry, r_, rcw, rch)}</g>')
         s.append(frame_group("rd", i, N, DUR, inner))
     s.append(f'<g font-size="11" fill="{th["mid"]}">'
-             + text_line(rx, ry + rrows * rch + 22, "SCAN // ACTIVE", 6.6, fill=th["fg"])
-             + text_line(rx + 120, ry + rrows * rch + 22, "TARGETS: 05   RANGE: ∞", 6.6)
+             + text_line(rx + 10, ry + rrows * rch + 16, "SCAN // CLIENTS", 6.6, fill=th["fg"])
+             + text_line(rx + 130, ry + rrows * rch + 16, "SLOTS: OPEN", 6.6)
              + "</g>")
-    s.append(f'<circle class="blink" cx="{rx - 10}" cy="{ry + rrows * rch + 18}" r="3.5" fill="{th["red"]}"/>')
+    s.append(f'<circle class="blink" cx="{rx}" cy="{ry + rrows * rch + 12}" r="3.5" fill="{th["red"]}"/>')
 
     s.append(corners(W, H, th))
     s.append(chrome_overlay(W, H, th, uid))
     s.append("</svg>")
-    write(f"about-{name}.svg", "".join(s))
+    write(f"panel-{name}.svg", "".join(s))
 
 
 def section_header(x, y, W, num, title, right, th):
@@ -574,95 +591,6 @@ def section_header(x, y, W, num, title, right, th):
     return o
 
 
-# --------------------------------------------------------------------------- STACK
-def build_stack(th, name):
-    W, H = 1200, 330
-    uid = "s"
-    css = frames_css("sp", 4, 0.6)
-    s = [svg_open(W, H, th, css), chrome_defs(W, H, th, uid), chrome_bg(W, H, th)]
-    x0 = 52
-    s.append(section_header(x0, 52, W, "02", "MODULES_LOADED", "STACK v2026.11", th))
-
-    fs = 13; cw = fs * 0.6
-    mods = [
-        ("/lang    ", "TypeScript · JavaScript · Python · PHP · SQL · HTML · CSS"),
-        ("/frontend", "React · Next.js · Tailwind · Framer Motion · GSAP · Three.js · Webflow"),
-        ("/backend ", "Node.js · Express · PostgreSQL · MySQL · MongoDB · Redis · Supabase"),
-        ("/ai      ", "OpenAI · Claude · RAG · n8n · Make"),
-        ("/infra   ", "Docker · Linux · NGINX · Vercel · Cloudflare · Git · GitHub Actions"),
-    ]
-    t = 0.4
-    for i, (path, items) in enumerate(mods):
-        y = 100 + i * 34
-        segs = [("$ ", th["red"]), ("mount ", th["mid"]), (path, th["fg"]), ("  [", th["dim"]),
-                ("################", th["fg"]), ("]  ", th["dim"]), ("OK", th["red"]), ("  ", None),
-                (items, th["fg"])]
-        el, t = typed(x0, y, segs, cw, t, speed=0.007, clip_id=f"st{i}", fs=fs)
-        s.append(f'<g font-size="{fs}">{el}</g>')
-        t += 0.08
-    yl = 100 + len(mods) * 34 + 8
-    el, t = typed(x0, yl, [("$ ", th["red"]), ("all systems nominal", th["fg"]), (" · 5/5 modules online", th["mid"])],
-                  cw, t + 0.2, speed=0.03, clip_id="stz", fs=fs)
-    s.append(f'<g font-size="{fs}">{el}</g>')
-    s.append(f'<rect class="blink" x="{x0 + 45 * cw + 4:.1f}" y="{yl - fs * .82:.1f}" width="{cw:.1f}" height="{fs}" fill="{th["red"]}"/>')
-
-    # spinner top right
-    for i, ch_ in enumerate("|/-\\"):
-        s.append(frame_group("sp", i, 4, 0.6, f'<g font-size="13" fill="{th["red"]}">{text_line(W - 66, 80, ch_, 7.8)}</g>'))
-    s.append(corners(W, H, th))
-    s.append(chrome_overlay(W, H, th, uid))
-    s.append("</svg>")
-    write(f"stack-{name}.svg", "".join(s))
-
-
-# --------------------------------------------------------------------------- SECTION BAR + FOOTER
-def build_bar(th, name):
-    W, H = 1200, 84
-    uid = "b"
-    s = [svg_open(W, H, th), chrome_defs(W, H, th, uid), chrome_bg(W, H, th)]
-    s.append(section_header(52, 48, W, "03", "TELEMETRY", "LIVE FEED", th))
-    s.append(f'<circle class="blink" cx="{W - 52 - 9 * 7.8 - 12:.1f}" cy="43.5" r="3.5" fill="{th["red"]}"/>')
-    s.append(chrome_overlay(W, H, th, uid, roll=False))
-    s.append("</svg>")
-    write(f"telemetry-{name}.svg", "".join(s))
-
-
-def build_footer(th, name):
-    W, H = 1200, 250
-    uid = "f"
-    css = (".wv{animation:wv 2.6s linear infinite}@keyframes wv{to{transform:translateX(-300px)}}"
-           ".fl{animation:fl 3.6s steps(1) infinite}@keyframes fl{0%{opacity:1}80%{opacity:.3}82%{opacity:1}84%{opacity:.5}86%{opacity:1}}")
-    s = [svg_open(W, H, th, css), chrome_defs(W, H, th, uid), chrome_bg(W, H, th)]
-    hfs = 8; hcw = hfs * .6
-    fc, fr_ = 150, 15
-    cov = bitmap_text("SIGNAL LOST", fc, fr_, tracking=0.06)
-    rows = hollow_ascii(cov, seed=9)
-    x = (W - fc * hcw) / 2
-    s.append(f'<g class="fl" font-size="{hfs}" fill="{th["red"]}">{grid_lines(x, 52, rows, hcw, hfs)}</g>')
-    # flat-lining wave
-    pts = []
-    for xx in range(0, 1501, 5):
-        ph = xx / 300 * 2 * math.pi
-        y = 0
-        m = xx % 300
-        if 130 <= m <= 170:
-            y = 14 * math.sin((m - 130) / 40 * 2 * math.pi) * math.exp(-((m - 150) / 12) ** 2)
-        pts.append(f"{xx},{y:.1f}")
-    s.append(f'<g transform="translate(0,200)"><g class="wv"><polyline points="{" ".join(pts)}" fill="none" '
-             f'stroke="{th["red"]}" stroke-width="1.4"/></g></g>')
-    fs = 11; cw = fs * .6
-    s.append(f'<g font-size="{fs}" fill="{th["mid"]}">'
-             + text_line(52, 40, "[EOF]", cw, fill=th["red"])
-             + text_line(W - 52 - 38 * cw, 40, "x. 0000  y. 0000 · END OF TRANSMISSION", cw)
-             + text_line(52, H - 22, "LINUS72 // GEKKOS · SEE YOU IN THE NEXT BUILD", cw)
-             + "</g>")
-    s.append(f'<rect class="blink" x="{52 + 46 * cw:.1f}" y="{H - 22 - fs * .82:.1f}" width="{cw:.1f}" height="{fs}" fill="{th["red"]}"/>')
-    s.append(corners(W, H, th))
-    s.append(chrome_overlay(W, H, th, uid))
-    s.append("</svg>")
-    write(f"footer-{name}.svg", "".join(s))
-
-
 def write(fn, data):
     p = os.path.join(OUT, fn)
     with open(p, "w", encoding="utf-8") as fh:
@@ -673,7 +601,4 @@ def write(fn, data):
 if __name__ == "__main__":
     for name, th in THEMES.items():
         build_hero(th, name)
-        build_about(th, name)
-        build_stack(th, name)
-        build_bar(th, name)
-        build_footer(th, name)
+        build_panel(th, name)
