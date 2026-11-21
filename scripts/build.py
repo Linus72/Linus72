@@ -408,7 +408,7 @@ def build_hero(th, name):
     # spec block
     sfs = 11; scw = sfs * 0.6
     spec = [
-        [("CONTACT .... ", th["dim"]), ("hallo@linusthomas.de", th["red"])],
+        [("CONTACT .... ", th["dim"]), ("linus@gekkos.tech", th["red"])],
         [("COORDS ..... ", th["dim"]), ("52.27°N  08.04°E", th["fg"])],
         [("MODE ....... ", th["dim"]), ("BUILD > SHIP > REPEAT", th["fg"])],
     ]
@@ -532,7 +532,7 @@ def build_panel(th, name):
     el, t = typed(x0, 230, [("> ", th["red"]), ("INTERESSE AN EINEM PROJEKT? SCHREIB MIR:", th["fg"])],
                   ccw, t + 0.1, speed=0.02, clip_id="ct0", fs=cfs)
     s.append(f'<g font-size="{cfs}">{el}</g>')
-    mail = "hallo@linusthomas.de"
+    mail = "linus@gekkos.tech"
     el, t = typed(x0, 258, [("> ", th["red"]), (mail, th["red"])], ccw, t + 0.05, speed=0.03, clip_id="ct1", fs=cfs)
     s.append(f'<g font-size="{cfs}">{el}</g>')
     s.append(f'<path d="M{x0 + 2 * ccw:.1f},{263}h{len(mail) * ccw:.1f}" stroke="{th["red"]}" stroke-width="1.2"/>')
